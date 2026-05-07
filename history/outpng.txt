@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+def create_data_model():
+    """存储所有输入数据"""
+    data = {}
+    
+    # 1. 客户点经纬度坐标
+    data['locations'] = {
+		# 以Python字典的形式录入客户点经纬度坐标
+    }
+    
+    # 2. 车辆最大数量和车辆额定载重输入
+    data['num_vehicles'] = # 公司提供的最大车辆数
+    data['depot'] = 0
+    data['vehicle_capacities'] = [# 每辆车的额定载重 ] * data['num_vehicles'] 
+    
+    # 3. 客户点货物需求量 (千克)
+    demand_sum = {
+		# 以Python字典的形式录入客户点货物需求量
+    }
+    data['demands'] = [demand_sum[i] for i in range(28)]
+    
+    # 4. 客户点独立时间要求 (分钟)
+    time_windows_dict = {
+		# 以Python字典的形式录入客户点时间要求，格式1:(x,y)
+    }
+    data['time_windows'] = [time_windows_dict[i] for i in range(28)]
+    
+    # 5. 核心业务参数
+    # 设定为临界车速: 50 km/h (即 50/60 km/min)
+    data['vehicle_speed_km_per_min'] = 50 / 60.0  
+    data['service_time_per_customer'] = 10        # 每站卸货 10 分钟
+    
+    return data
+
+
+
+
+
